@@ -1,5 +1,5 @@
 {
-  "name": "reflect",
+  "name": "moody",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall":"prisma generate"
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@arcjet/next": "^1.0.0-beta.2",
@@ -42,10 +42,12 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@typescript-eslint/parser": "^8.26.0",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
     "postcss": "^8",
     "prisma": "^6.4.1",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.8.2"
   }
 }
