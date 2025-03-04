@@ -12,7 +12,7 @@ export default {
       fontFamily: {
         custom1: ["Amellianah", "sans-serif"],
         custom2: ["Daily Spark Script", "sans-serif"],
-        custom: ["Cartucho", "sans-serif"],
+        custom: ["Typo Draft Demo", "sans-serif"],
         custom3: ["LoveStruckScriptDemo", "sans-serif"],
         
       },

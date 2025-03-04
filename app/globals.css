@@ -82,9 +82,8 @@ body {
 
   .text-gradient-xl {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(to right, #000046, #1cb5e0);
-    -webkit-text-stroke: 1px rgb(1, 25, 55)
-    
+    background-image: linear-gradient(to right, #020263,#108bad 50%, #1cb5e0);
+   
   }
   .text-gradient-sm {
     @apply bg-clip-text text-transparent;
@@ -93,7 +92,7 @@ body {
   .text-gradient-lg {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(to right, #000046, #1cb5e0 50%, #1cb5e0);
-    -webkit-text-stroke: 1px rgb(1, 25, 55)
+   
   }
 }
 html {
@@ -155,9 +154,10 @@ html {
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: "Cartucho";
-  src: url("/fonts/Cartucho.woff") format("woff");
+  font-family: "Typo Draft Demo";
+  src: url("/fonts/Typo Draft Demo.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -167,5 +167,3 @@ html {
   font-weight: normal;
   font-style: normal;
 }
-
-

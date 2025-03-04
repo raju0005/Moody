@@ -30,12 +30,7 @@ export default async function Home() {
       description:
         "Express yourself with a powerful editor supporting markdown, formatting, and more.",
     },
-    {
-      icon: Sparkles,
-      title: "Daily Inspiration",
-      description:
-        "Get inspired with daily prompts and mood-based imagery to spark your creativity.",
-    },
+
     {
       icon: Lock,
       title: "Secure & Private",
@@ -47,7 +42,7 @@ export default async function Home() {
     <div className="relative container mx-auto px-4 py-16">
       <div className="max-w-5xl mx-auto text-center space-y-9  ">
         <h1 className="text-gradient-xl relative text-5xl md:text-5xl lg:text-8xl mb-20 gradient-title   font-custom flex flex-col items-center text-center z-10 uppercase pb-10 ">
-          EVery mood tells a story.
+          EVery mood tells a story
           <span
             style={{ WebkitTextStroke: "0" }}
             className="absolute text-gradient-sm md:bottom-1 -bottom-[1.5rem] font-custom3 font-semibold text-4xl md:text-5xl lg:text-6xl z-20 tracking-wide lowercase text-outline-none"
@@ -57,8 +52,8 @@ export default async function Home() {
         </h1>
 
         <p className="text-lg md:text-xl text-blue-800 mb-8">
-          Capture your thoughts, track your moods, and reflect your journey in a
-          beautiful, secure space.
+          Unveil your moods, pen your thoughts, and find clarity in every
+          moment.
         </p>
         <div className="relative border-2 border-y-amber-100 rounded-lg border-x-blue-100">
           <div className="absolute inset-0 bg-gradient-to-t from-blue-200 via-transparent to-white/50 pointer-events-none z-10 rounded-lg  " />
@@ -108,7 +103,7 @@ export default async function Home() {
       </div>
       <section
         id="features"
-        className="mt-24 grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        className="mt-24 grid md:grid-cols-2 lg:grid-cols-2 gap-8"
       >
         {features.map((feature, index) => (
           <Card
@@ -220,11 +215,10 @@ export default async function Home() {
         <Card className="bg-gradient-to-r from-blue-100 to-amber-100">
           <CardContent className="p-12 text-center">
             <h2 className="text-3xl font-bold text-blue-900 mb-6">
-              Start Reflect-ing on Your Journey Today
+              Start exploring your moods today
             </h2>
             <p className="text-lg text-blue-700 mb-8 max-w-2xl mx-auto ">
-              Join thousands of writers who have already discovered the power of
-              digital journaling
+              Let's unlock the power of self-discovery and embrace every mood.
             </p>
             <Link href="/dashboard">
               <Button size="lg" variant="journal" className="animate-bounce">
