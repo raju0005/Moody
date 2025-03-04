@@ -12,8 +12,9 @@ const alegreyaSansSC = Alegreya_Sans_SC({
 });
 
 export const metadata = {
-  title: "Reflect",
-  description: "A Journaling App",
+  title: "Moody",
+  description: "A Digital Diary",
+  icons: "/favicon.ico"
 };
 
 export default function RootLayout({ children }) {

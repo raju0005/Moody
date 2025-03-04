@@ -83,6 +83,8 @@ body {
   .text-gradient-xl {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(to right, #000046, #1cb5e0);
+    -webkit-text-stroke: 1px rgb(1, 25, 55)
+    
   }
   .text-gradient-sm {
     @apply bg-clip-text text-transparent;
@@ -90,7 +92,8 @@ body {
   }
   .text-gradient-lg {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(to right, #02028f, #f7b733);
+    background-image: linear-gradient(to right, #000046, #1cb5e0 50%, #1cb5e0);
+    -webkit-text-stroke: 1px rgb(1, 25, 55)
   }
 }
 html {
@@ -114,13 +117,12 @@ html {
   box-shadow: 2px black;
   padding: 10px;
   font-weight: 500;
-  font-size:larger;
+  font-size: larger;
 }
-.ql-toolbar{
+.ql-toolbar {
   border-radius: 10px;
   font-weight: 700;
   font-size: large;
-  
 }
 .bg-paper {
   background-color: #fdfdfb;
@@ -166,6 +168,4 @@ html {
   font-style: normal;
 }
 
-.text-outline {
-  -webkit-text-stroke: 1px black; /* Stroke width and color */
-}
+

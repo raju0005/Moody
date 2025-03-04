@@ -130,7 +130,7 @@ const JournalEntryPage = () => {
 
   useEffect(() => {
     if (createdEntry && !createEntryLoading) {
-      if (!isEditMode && draftData) {
+      if (!isEditMode) {
         saveDraftFn({ title: "", content: "", mood: "" });
       }
       router.push(
@@ -162,18 +162,18 @@ const JournalEntryPage = () => {
     createCollectionsFn(data);
   };
   const formData = watch();
+
   const handleDraft = async () => {
     if (!isDirty) {
       toast.error("No Changes to save");
       return;
     }
     await saveDraftFn(formData);
-  };
-  useEffect(() => {
-    if (savedDraft?.success && !savingDraft) {
-      toast.success("Draft Saved successfully");
+    if (result?.success) {
+      toast.success("Draft saved successfully");
     }
-  }, [savedDraft, savingDraft]);
+  };
+  
   const isLoading =
     createEntryLoading ||
     collectionsLoading ||

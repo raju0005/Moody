@@ -46,9 +46,12 @@ export default async function Home() {
   return (
     <div className="relative container mx-auto px-4 py-16">
       <div className="max-w-5xl mx-auto text-center space-y-9  ">
-        <h1 className="text-gradient-xl relative text-5xl md:text-5xl lg:text-8xl mb-20 gradient-title  font-custom flex flex-col items-center text-center z-10 uppercase pb-10 ">
+        <h1 className="text-gradient-xl relative text-5xl md:text-5xl lg:text-8xl mb-20 gradient-title   font-custom flex flex-col items-center text-center z-10 uppercase pb-10 ">
           EVery mood tells a story.
-          <span className="absolute text-gradient-sm md:bottom-1 -bottom-[1.5rem] font-custom3 font-semibold text-4xl md:text-5xl lg:text-6xl z-20 tracking-wide lowercase">
+          <span
+            style={{ WebkitTextStroke: "0" }}
+            className="absolute text-gradient-sm md:bottom-1 -bottom-[1.5rem] font-custom3 font-semibold text-4xl md:text-5xl lg:text-6xl z-20 tracking-wide lowercase text-outline-none"
+          >
             Write it down, feel it, and let it go.
           </span>
         </h1>

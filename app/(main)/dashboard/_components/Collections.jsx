@@ -27,7 +27,7 @@ const Collections = ({ collections = [], entriesByCollection }) => {
   if (collections.length === 0) return <></>;
   return (
     <section id='collections' className="space-y-6">
-      <h2 className="text-3xl md:text-4xl font-custom uppercase text-gradient-xl ">Collections</h2>
+      <h2 className="text-3xl md:text-4xl font-custom uppercase text-gradient-lg ">Collections</h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <CollectionPreview
           isCreateNew={true}

@@ -64,7 +64,7 @@ const Mood_Analytics = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center">
+      <div className="flex flex-wrap justify-between items-center gap-4">
         <h2 className="md:text-5xl text-4xl font-custom uppercase text-gradient-xl">
           Dashboard
         </h2>
