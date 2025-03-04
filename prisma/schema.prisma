@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String       @id @default(auto()) @map("_id") @db.ObjectId
+  clerkUserId  String       @unique
+  email        String       @unique
+  name         String?
+  imageUrl     String?
+  collections  Collection[]
+  entries      Entry[]
+  currentDraft Draft?
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+}
+
+model Collection {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  description String
+  userId      String   @db.ObjectId
+  entries     Entry[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  User        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([name, userId])
+}
+
+model Entry {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  content   String
+  userId    String @db.ObjectId
+  mood      String
+  moodScore Int
+
+  collectionId String?     @db.ObjectId
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  User         User        @relation(fields: [userId], references: [id])
+  Collection   Collection? @relation(fields: [collectionId], references: [id], onDelete: Cascade)
+}
+
+model Draft {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  content   String?
+  mood      String?
+  userId    String   @unique @db.ObjectId
+  User      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
