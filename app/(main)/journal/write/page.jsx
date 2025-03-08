@@ -39,7 +39,7 @@ const JournalEntryPage = () => {
   const searchParams = useSearchParams();
   const editId = searchParams.get("edit");
   const [isEditMode, setIsEditMode] = useState(false);
-
+  const [moodSearch, setMoodSearch] = useState("");
   const {
     loading: entryLoading,
     fn: fetchEntry,
@@ -173,7 +173,7 @@ const JournalEntryPage = () => {
       toast.success("Draft saved successfully");
     }
   };
-  
+
   const isLoading =
     createEntryLoading ||
     collectionsLoading ||
@@ -181,6 +181,13 @@ const JournalEntryPage = () => {
     draftLoading ||
     savingDraft;
   const selectedMood = watch("mood");
+  const filteredMoods = moodSearch
+    ? Object.values(MOODS).filter((mood) =>
+        `${mood.label} ${mood.emoji}`
+          .toLowerCase()
+          .includes(moodSearch.toLowerCase())
+      )
+    : Object.values(MOODS);
 
   return (
     <div className="py-8 ">
@@ -222,7 +229,15 @@ const JournalEntryPage = () => {
                     <SelectValue placeholder="Select a mood..." />
                   </SelectTrigger>
                   <SelectContent>
-                    {Object.values(MOODS).map((mood) => {
+                    <div className="">
+                      <Input
+                        type="text"
+                        value={moodSearch}
+                        placeholder="Search a mood..."
+                        onChange={(e) => setMoodSearch(e.target.value)}
+                      />
+                    </div>
+                    {filteredMoods.map((mood) => {
                       return (
                         <SelectItem key={mood.id} value={mood.id}>
                           <span className="flex items-center gap-2 text-lg font-bold">

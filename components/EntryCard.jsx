@@ -15,7 +15,7 @@ const EntryCard = ({ entry }) => {
                 <h2 className="font-bold text-xl">{entry.title}</h2>
               </div>
               <div
-                className="text-gray-600 line-clamp-2 font-custom1 text-3xl"
+                className="text-gray-700 line-clamp-2 font-custom1 text-3xl"
                 dangerouslySetInnerHTML={{ __html: entry.content }}
               />
             </div>
